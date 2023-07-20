@@ -10,6 +10,7 @@ from database.models import (
     Movie,
 )
 from auth.auth import requires_auth
+import sys
 
 
 def create_app(test_config=None):
@@ -147,6 +148,7 @@ def create_app(test_config=None):
 
         except Exception as e:
             db.session.rollback()
+            print(sys.exc_info())
             return jsonify({"success": False, "error": str(e)}), 500
 
     @app.route("/movies/<int:movie_id>", methods=["PATCH"])

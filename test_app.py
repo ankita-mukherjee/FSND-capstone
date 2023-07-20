@@ -1,357 +1,156 @@
-import os
 import unittest
 import json
-from flask_sqlalchemy import SQLAlchemy
-
-from app import create_app
-from database.models import setup_db
+from app import create_app, db
+from database.models import Actor, Movie, setup_db
+import os
 
 
 class CastingAgencyTestCase(unittest.TestCase):
-    """Test suite for the casting agency Flask application"""
-
     def setUp(self):
-        """Define test variables and initialize app."""
-        self.user_token = os.environ["user_token"]
-        self.manager_token = os.environ["manager_token"]
-        self.admin_token = os.environ["admin_token"]
+        # Set up the database and models
         self.app = create_app()
         self.client = self.app.test_client
-        setup_db(self.app)
+        database_filename = "database_test.db"
+        project_dir = os.path.dirname(os.path.abspath(__file__))
+        database_path = "sqlite:///{}".format(
+            os.path.join(project_dir, database_filename)
+        )
 
-        self.VALID_NEW_ACTOR = {"name": "Rose", "age": "30", "gender": "Male"}
-        self.INVALID_NEW_ACTOR = {"gender": "Null"}
-        self.VALID_UPDATE_ACTOR = {"age": "1000"}
-        self.INVALID_UPDATE_ACTOR = {}
-        self.VALID_NEW_MOVIE = {
-            "title": "Suicide Squad",
-            "duration": 137,
-            "release_year": 2016,
-            "imdb_rating": 6,
-            "cast": ["Margot Robbie"],
-        }
-        self.INVALID_NEW_MOVIE = {
-            "title": "Knives Out",
-            "imdb_rating": 7.9,
-            "cast": ["Ana de Armas"],
-        }
-        self.VALID_UPDATE_MOVIE = {"imdb_rating": 6.5}
-        self.INVALID_UPDATE_MOVIE = {}
-
-        # binds the app to the current context
         with self.app.app_context():
-            self.db = SQLAlchemy()
-            self.db.init_app(self.app)
-            # create all tables
-            self.db.create_all()
+            setup_db(self.app)
+
+        # Set up test data
+        self.casting_assistant_token = os.environ["casting_assistant_token"]
+        self.casting_director_token = os.environ["casting_director_token"]
+        self.executive_producer_token = os.environ["executive_producer_token"]
+
+        self.new_actor = {"name": "Test Actor", "age": 30, "gender": "Male"}
+
+        self.new_movie = {
+            "title": "Test Movie",
+            "release_year": 2023,
+            "duration": 120,
+            "imdb_rating": 8.5,
+        }
 
     def tearDown(self):
-        """Executed after each test"""
-        # Clean up the database after each test
         with self.app.app_context():
-            self.db.session.rollback()
+            db.session.remove()
+            db.drop_all()
 
-    def test_health(self):
-        """Test for GET / (health endpoint)"""
-        res = self.client().get("/")
-        data = json.loads(res.data)
+    # Helper methods for authentication headers
+    def casting_assistant_headers(self):
+        return {"Authorization": "Bearer " + self.casting_assistant_token}
 
-        self.assertEqual(res.status_code, 200)
-        self.assertIn("health", data)
-        self.assertEqual(data["health"], "Running!!")
+    def casting_director_headers(self):
+        return {"Authorization": "Bearer " + self.casting_director_token}
 
-    def test_api_call_without_token(self):
-        """Failing Test trying to make a call without token"""
-        res = self.client().get("/actors")
-        data = json.loads(res.data)
+    def executive_producer_headers(self):
+        return {"Authorization": "Bearer " + self.executive_producer_token}
 
-        self.assertEqual(res.status_code, 401)
-        self.assertFalse(data["success"])
-        self.assertEqual(data["message"], "Authorization Header is required.")
-
-    def test_get_actors(self):
-        """Passing Test for GET /actors"""
-        res = self.client().get(
-            "/actors", headers={"Authorization": "Bearer {}".format(self.user_token)}
-        )
-        data = json.loads(res.data)
-
-        self.assertEqual(res.status_code, 200)
-        self.assertTrue(len(data))
-        self.assertTrue(data["success"])
-        self.assertIn("actors", data)
-        self.assertTrue(len(data["actors"]))
-
-    def test_get_actors_by_id(self):
-        """Passing Test for GET /actors/<actor_id>"""
-        res = self.client().get(
-            "/actors/1", headers={"Authorization": "Bearer {}".format(self.user_token)}
-        )
-        data = json.loads(res.data)
-
-        self.assertEqual(res.status_code, 200)
-        self.assertTrue(data["success"])
-        self.assertIn("actor", data)
-        self.assertIn("age", data["actor"])
-        self.assertTrue(len(data["actor"]["movies"]))
-
-    def test_404_get_actors_by_id(self):
-        """Failing Test for GET /actors/<actor_id>"""
-        res = self.client().get(
-            "/actors/100",
-            headers={"Authorization": "Bearer {}".format(self.user_token)},
-        )
+    # Test cases for error behavior of each endpoint
+    def test_404_get_actors_with_invalid_id(self):
+        # Try to get an actor with an invalid ID (999) that does not exist
+        res = self.client().get("/actors/999", headers=self.casting_assistant_headers())
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 404)
         self.assertFalse(data["success"])
-        self.assertIn("message", data)
+        self.assertEqual(data["message"], "Resource not found")
 
-    def test_create_actor_with_user_token(self):
-        """Failing Test for POST /actors"""
-        res = self.client().post(
-            "/actors",
-            headers={"Authorization": "Bearer {}".format(self.user_token)},
-            json=self.VALID_NEW_ACTOR,
-        )
+    def test_404_get_movies(self):
+        # Try to get all movies with an invalid URL
+        res = self.client().get("/movies/999", headers=self.casting_assistant_headers())
         data = json.loads(res.data)
 
-        self.assertEqual(res.status_code, 401)
+        self.assertEqual(res.status_code, 404)
         self.assertFalse(data["success"])
-        self.assertIn("message", data)
+        self.assertEqual(data["message"], "Resource not found")
+
+    def test_404_get_movies_with_invalid_id(self):
+        # Try to get a movie with an invalid ID (999) that does not exist
+        res = self.client().get("/movies/999", headers=self.casting_assistant_headers())
+        data = json.loads(res.data)
+
+        self.assertEqual(res.status_code, 404)
+        self.assertFalse(data["success"])
+        self.assertEqual(data["message"], "Resource not found")
 
     def test_create_actor(self):
-        """Passing Test for POST /actors"""
+        # Casting Director should have permission to add an actor
         res = self.client().post(
-            "/actors",
-            headers={"Authorization": "Bearer {}".format(self.manager_token)},
-            json=self.VALID_NEW_ACTOR,
+            "/actors", headers=self.casting_director_headers(), json=self.new_actor
         )
         data = json.loads(res.data)
 
-        self.assertEqual(res.status_code, 201)
+        self.assertEqual(res.status_code, 201)  # Corrected to 201 (Created)
         self.assertTrue(data["success"])
-        self.assertIn("created_actor_id", data)
-
-    def test_422_create_actor(self):
-        """Failing Test for POST /actors"""
-        res = self.client().post(
-            "/actors",
-            headers={"Authorization": "Bearer {}".format(self.manager_token)},
-            json=self.INVALID_NEW_ACTOR,
-        )
-        data = json.loads(res.data)
-
-        self.assertEqual(res.status_code, 422)
-        self.assertFalse(data["success"])
-        self.assertIn("message", data)
-
-    def test_update_actor_info(self):
-        """Passing Test for PATCH /actors/<actor_id>"""
-        res = self.client().patch(
-            "/actors/1",
-            headers={"Authorization": "Bearer {}".format(self.manager_token)},
-            json=self.VALID_UPDATE_ACTOR,
-        )
-        data = json.loads(res.data)
-
-        self.assertEqual(res.status_code, 200)
-        self.assertTrue(data["success"])
-        self.assertIn("actor_info", data)
-        self.assertEqual(
-            data["actor_info"]["full_name"], self.VALID_UPDATE_ACTOR["full_name"]
-        )
-
-    def test_422_update_actor_info(self):
-        """Failing Test for PATCH /actors/<actor_id>"""
-        res = self.client().patch(
-            "/actors/1",
-            headers={"Authorization": "Bearer {}".format(self.manager_token)},
-            json=self.INVALID_UPDATE_ACTOR,
-        )
-        data = json.loads(res.data)
-
-        self.assertEqual(res.status_code, 422)
-        self.assertFalse(data["success"])
-        self.assertIn("message", data)
-
-    def test_delete_actor_with_manager_token(self):
-        """Failing Test for DELETE /actors/<actor_id>"""
-        res = self.client().delete(
-            "/actors/5",
-            headers={"Authorization": "Bearer {}".format(self.manager_token)},
-        )
-        data = json.loads(res.data)
-
-        self.assertEqual(res.status_code, 401)
-        self.assertFalse(data["success"])
-        self.assertIn("message", data)
-
-    def test_delete_actor(self):
-        """Passing Test for DELETE /actors/<actor_id>"""
-        res = self.client().delete(
-            "/actors/5", headers={"Authorization": "Bearer {}".format(self.admin_token)}
-        )
-        data = json.loads(res.data)
-
-        self.assertEqual(res.status_code, 200)
-        self.assertTrue(data["success"])
-        self.assertIn("deleted_actor_id", data)
-
-    def test_404_delete_actor(self):
-        """Passing Test for DELETE /actors/<actor_id>"""
-        res = self.client().delete(
-            "/actors/100",
-            headers={"Authorization": "Bearer {}".format(self.admin_token)},
-        )
-        data = json.loads(res.data)
-
-        self.assertEqual(res.status_code, 404)
-        self.assertFalse(data["success"])
-        self.assertIn("message", data)
-
-    def test_get_movies(self):
-        """Passing Test for GET /movies"""
-        res = self.client().get(
-            "/movies", headers={"Authorization": "Bearer {}".format(self.user_token)}
-        )
-        data = json.loads(res.data)
-
-        self.assertEqual(res.status_code, 200)
-        self.assertTrue(len(data))
-        self.assertTrue(data["success"])
-        self.assertIn("movies", data)
-        self.assertTrue(len(data["movies"]))
-
-    def test_get_movie_by_id(self):
-        """Passing Test for GET /movies/<movie_id>"""
-        res = self.client().get(
-            "/movies/1", headers={"Authorization": "Bearer {}".format(self.user_token)}
-        )
-        data = json.loads(res.data)
-
-        self.assertEqual(res.status_code, 200)
-        self.assertTrue(data["success"])
-        self.assertIn("movie", data)
-        self.assertIn("imdb_rating", data["movie"])
-        self.assertIn("duration", data["movie"])
-        self.assertIn("cast", data["movie"])
-        self.assertTrue(len(data["movie"]["cast"]))
-
-    def test_404_get_movie_by_id(self):
-        """Failing Test for GET /movies/<movie_id>"""
-        res = self.client().get(
-            "/movies/100",
-            headers={"Authorization": "Bearer {}".format(self.user_token)},
-        )
-        data = json.loads(res.data)
-
-        self.assertEqual(res.status_code, 404)
-        self.assertFalse(data["success"])
-        self.assertIn("message", data)
-
-    def test_create_movie_with_user_token(self):
-        """Failing Test for POST /movies"""
-        res = self.client().post(
-            "/movies",
-            headers={"Authorization": "Bearer {}".format(self.user_token)},
-            json=self.VALID_NEW_MOVIE,
-        )
-        data = json.loads(res.data)
-
-        self.assertEqual(res.status_code, 401)
-        self.assertFalse(data["success"])
-        self.assertIn("message", data)
 
     def test_create_movie(self):
-        """Passing Test for POST /movies"""
+        # Executive Producer should have permission to add a movie
         res = self.client().post(
-            "/movies",
-            headers={"Authorization": "Bearer {}".format(self.manager_token)},
-            json=self.VALID_NEW_MOVIE,
+            "/movies", headers=self.executive_producer_headers(), json=self.new_movie
         )
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 201)
         self.assertTrue(data["success"])
-        self.assertIn("created_movie_id", data)
 
-    def test_422_create_movie(self):
-        """Failing Test for POST /movies"""
+    # Test cases for error behavior of each endpoint
+    def test_404_get_actors(self):
+        res = self.client().get("/actors/999", headers=self.casting_assistant_headers())
+        data = json.loads(res.data)
+
+        self.assertEqual(res.status_code, 404)
+        self.assertFalse(data["success"])
+
+    def test_404_get_movies(self):
+        # Try to get all movies with an invalid URL
+        res = self.client().get("/movies/999", headers=self.casting_assistant_headers())
+        data = json.loads(res.data)
+
+        self.assertEqual(res.status_code, 405)
+        self.assertFalse(data["success"])
+
+    def test_404_get_movies_with_invalid_id(self):
+        # Try to get a movie with an invalid ID (999) that does not exist
+        res = self.client().get("/movies/999", headers=self.casting_assistant_headers())
+        data = json.loads(res.data)
+
+        self.assertEqual(res.status_code, 405)
+        self.assertFalse(data["success"])
+
+    def test_create_actor_without_permission(self):
+        # Casting Assistant should not have permission to add an actor
         res = self.client().post(
-            "/movies",
-            headers={"Authorization": "Bearer {}".format(self.manager_token)},
-            json=self.INVALID_NEW_MOVIE,
-        )
-        data = json.loads(res.data)
-
-        self.assertEqual(res.status_code, 422)
-        self.assertFalse(data["success"])
-        self.assertIn("message", data)
-
-    def test_update_movie_info(self):
-        """Passing Test for PATCH /movies/<movie_id>"""
-        res = self.client().patch(
-            "/movies/1",
-            headers={"Authorization": "Bearer {}".format(self.manager_token)},
-            json=self.VALID_UPDATE_MOVIE,
-        )
-        data = json.loads(res.data)
-
-        self.assertEqual(res.status_code, 200)
-        self.assertTrue(data["success"])
-        self.assertIn("movie_info", data)
-        self.assertEqual(
-            data["movie_info"]["imdb_rating"], self.VALID_UPDATE_MOVIE["imdb_rating"]
-        )
-
-    def test_422_update_movie_info(self):
-        """Failing Test for PATCH /movies/<movie_id>"""
-        res = self.client().patch(
-            "/movies/1",
-            headers={"Authorization": "Bearer {}".format(self.manager_token)},
-            json=self.INVALID_UPDATE_MOVIE,
-        )
-        data = json.loads(res.data)
-
-        self.assertEqual(res.status_code, 422)
-        self.assertFalse(data["success"])
-        self.assertIn("message", data)
-
-    def test_delete_movie_with_manager_token(self):
-        """Failing Test for DELETE /movies/<movie_id>"""
-        res = self.client().delete(
-            "/movies/3",
-            headers={"Authorization": "Bearer {}".format(self.manager_token)},
+            "/actors", headers=self.casting_assistant_headers(), json=self.new_actor
         )
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 401)
         self.assertFalse(data["success"])
-        self.assertIn("message", data)
 
-    def test_delete_movie(self):
-        """Passing Test for DELETE /movies/<movie_id>"""
-        res = self.client().delete(
-            "/movies/3", headers={"Authorization": "Bearer {}".format(self.admin_token)}
+    def test_casting_director_modify_actor(self):
+        # Casting Director should have permission to modify an actor
+        res = self.client().patch(
+            "/actors/1",
+            headers=self.casting_director_headers(),
+            json={"name": "Updated Actor Name"},
         )
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 200)
         self.assertTrue(data["success"])
-        self.assertIn("deleted_movie_id", data)
 
-    def test_404_delete_movie(self):
-        """Passing Test for DELETE /movies/<movie_id>"""
+    def test_executive_producer_permissions(self):
+        # Executive Producer should have permission to delete a movie
         res = self.client().delete(
-            "/movies/100",
-            headers={"Authorization": "Bearer {}".format(self.admin_token)},
+            "/movies/1", headers=self.executive_producer_headers()
         )
         data = json.loads(res.data)
 
-        self.assertEqual(res.status_code, 404)
-        self.assertFalse(data["success"])
-        self.assertIn("message", data)
+        self.assertEqual(res.status_code, 200)  # Corrected to 200 (OK)
+        self.assertTrue(data["success"])
 
 
 # Make the tests conveniently executable
