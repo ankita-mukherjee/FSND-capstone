@@ -1,7 +1,7 @@
 # Casting Agency API
 
 ## Capstone Project for Udacity's Full Stack Developer Nanodegree
-Heroku Link: https://ry-fsnd-capstone.herokuapp.com
+Heroku Link: https://capstone-development.onrender.com
 
 While running locally: http://localhost:5000
 
@@ -9,13 +9,16 @@ While running locally: http://localhost:5000
 
 ### Installing Dependencies
 
-#### Python 3.7
+#### Python 3.7.11
 
 Follow instructions to install the latest version of python for your platform in the [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python).
 
-#### Virtual Enviornment
+#### OPTIONAL - Create a Virtual environment
 
 Recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized. Instructions for setting up a virual enviornment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/).
+
+python3 -m venv myvenv
+source myvenv/bin/activate
 
 #### PIP Dependencies
 
@@ -35,23 +38,9 @@ This will install all of the required packages.
 
 ## Running the server
 
-Before running the application locally, make the following changes in the `app.py` file in root directory:
-- Replace the following import statements
-  ```
-    from database.models import db_drop_and_create_all, setup_db, Actor, Movie
-    from auth.auth import AuthError, requires_auth
-  ```
-  with
-  ```
-    from .database.models import db_drop_and_create_all, setup_db, Actor, Movie
-    from .auth.auth import AuthError, requires_auth
-  ```
-- Also, uncomment the line `db_drop_and_create_all()` on the initial run to setup the required tables in the database.
-
 To run the server, execute:
 
 ```bash
-export DATABASE_URL=<database-connection-url>
 export FLASK_APP=app.py
 flask run --reload
 ```
@@ -110,7 +99,7 @@ The API will return the following errors based on how the request fails:
    - is a public endpoint, requires no authentication
  
  - Sample Request
-   - `https://ry-fsnd-capstone.herokuapp.com`
+   - `https://capstone-development.onrender.com/`
 
 <details>
 <summary>Sample Response</summary>
@@ -129,7 +118,7 @@ The API will return the following errors based on how the request fails:
    - requires `get:actors` permission
  
  - Sample Request
-   - `https://ry-fsnd-capstone.herokuapp.com/actors`
+   - `https://capstone-development.onrender.com/actors`
 
 <details>
 <summary>Sample Response</summary>
@@ -139,19 +128,7 @@ The API will return the following errors based on how the request fails:
     "actors": [
         {
             "id": 1,
-            "name": "Anne Hathaway"
-        },
-        {
-            "id": 2,
-            "name": "Matthew McConaughey"
-        },
-        {
-            "id": 3,
-            "name": "Margot Robbie"
-        },
-        {
-            "id": 4,
-            "name": "Mary Elizabeth Winstead"
+            "name": "John Doe"
         }
     ],
     "success": true
@@ -163,25 +140,20 @@ The API will return the following errors based on how the request fails:
 #### GET /actors/{actor_id}
  - General
    - gets the complete info for an actor
-   - requires `get:actors-info` permission
+   - requires `get:actors` permission
  
  - Sample Request
-   - `https://ry-fsnd-capstone.herokuapp.com/actors/1`
+   - `https://capstone-development.onrender.com/actors/1`
 
 <details>
 <summary>Sample Response</summary>
 
 ```
 {
-    "actor": {
-        "date_of_birth": "November 12, 1982",
-        "full_name": "Anne Jacqueline Hathaway",
-        "movies": [
-            "Serenity"
-        ],
-        "name": "Anne Hathaway"
-    },
-    "success": true
+    "actor_id": 1,
+    "age": 30,
+    "gender": "Male",
+    "name": "John Doe"
 }
 ```
   
@@ -190,32 +162,35 @@ The API will return the following errors based on how the request fails:
 #### POST /actors
  - General
    - creates a new actor
-   - requires `post:actor` permission
+   - requires `post:actors` permission
  
  - Request Body
    - name: string, required
-   - full_name: string, optional
-   - date_of_birth: date, required
+   - age: Integer, required
+   - gender: String, required
  
  - Sample Request
-   - `https://ry-fsnd-capstone.herokuapp.com/actors`
+   - `https://capstone-development.onrender.com/actors`
    - Request Body
      ```
         {
-            "name": "Ana de Armas",
-            "full_name": "Ana Celia de Armas Caso",
-            "date_of_birth": "April 30, 1988"
+         "name": "John Doe",
+         "age": 30,
+         "gender": "Male"
         }
+    
      ```
 
 <details>
 <summary>Sample Response</summary>
 
 ```
-{
-    "created_actor_id": 5,
+
+    {
+    "message": "Actor added successfully",
     "success": true
-}
+    }
+  
 ```
   
 </details>
@@ -223,20 +198,23 @@ The API will return the following errors based on how the request fails:
 #### PATCH /actors/{actor_id}
  - General
    - updates the info for an actor
-   - requires `patch:actor` permission
+   - requires `patch:actors` permission
  
  - Request Body (at least one of the following fields required)
    - name: string, optional
-   - full_name: string, optional
-   - date_of_birth: date, optional
+   - age: Integer, optional
+   - gender: string, optional
  
  - Sample Request
-   - `https://ry-fsnd-capstone.herokuapp.com/actors/5`
+   - `https://capstone-development.onrender.com/actors/1`
    - Request Body
      ```
-       {
-            "full_name": "Ana de Arams Caso"
-       }
+      {
+        "name": "Merry",
+        "age": 20,
+        "gender": "Female"
+      }
+
      ```
 
 <details>
@@ -244,11 +222,7 @@ The API will return the following errors based on how the request fails:
 
 ```
 {
-    "actor_info": {
-        "date_of_birth": "April 30, 1988",
-        "full_name": "Ana de Arams Caso",
-        "name": "Ana de Armas"
-    },
+    "message": "Actor updated successfully",
     "success": true
 }
 ```
@@ -258,18 +232,18 @@ The API will return the following errors based on how the request fails:
 #### DELETE /actors/{actor_id}
  - General
    - deletes the actor
-   - requires `delete:actor` permission
+   - requires `delete:actors` permission
    - will also delete the mapping to the movie but will not delete the movie from the database
  
  - Sample Request
-   - `https://ry-fsnd-capstone.herokuapp.com/actors/5`
+   - `https://capstone-development.onrender.com/actors/2`
 
 <details>
 <summary>Sample Response</summary>
 
 ```
 {
-    "deleted_actor_id": 5,
+    "message": "Actor deleted successfully",
     "success": true
 }
 ```
@@ -282,7 +256,7 @@ The API will return the following errors based on how the request fails:
    - requires `get:movies` permission
  
  - Sample Request
-   - `https://ry-fsnd-capstone.herokuapp.com/movies`
+   - `https://capstone-development.onrender.com/movies`
 
 <details>
 <summary>Sample Response</summary>
@@ -292,13 +266,8 @@ The API will return the following errors based on how the request fails:
     "movies": [
         {
             "id": 1,
-            "release_year": 2019,
-            "title": "Serenity"
-        },
-        {
-            "id": 2,
-            "release_year": 2020,
-            "title": "Birds of Prey"
+            "release_year": 2023,
+            "title": "Example Movie"
         }
     ],
     "success": true
@@ -307,39 +276,11 @@ The API will return the following errors based on how the request fails:
 
 </details>
 
-#### GET /movies/{movie_id}
- - General
-   - gets the complete info for a movie
-   - requires `get:movies-info` permission
- 
- - Sample Request
-   - `https://ry-fsnd-capstone.herokuapp.com/movies/1`
-
-<details>
-<summary>Sample Response</summary>
-
-```
-{
-    "movie": {
-        "cast": [
-            "Anne Hathaway",
-            "Matthew McConaughey"
-        ],
-        "duration": 106,
-        "imdb_rating": 5.3,
-        "release_year": 2019,
-        "title": "Serenity"
-    },
-    "success": true
-}
-```
-  
-</details>
 
 #### POST /movies
  - General
    - creates a new movie
-   - requires `post:movie` permission
+   - requires `post:movies` permission
  
  - Request Body
    - title: string, required
@@ -353,16 +294,16 @@ The API will return the following errors based on how the request fails:
    - If not, the request will fail with code 422.
  
  - Sample Request
-   - `https://ry-fsnd-capstone.herokuapp.com/actors`
+   - `https://capstone-development.onrender.com/movies`
    - Request Body
      ```
-        {
-            "title": "Knives Out",
-            "duration": 130,
-            "release_year": 2019,
-            "imdb_rating": 7.9,
-            "cast": ["Ana de Armas"]
-        }
+      {
+        "title": "The Movie",
+        "release_year": 2023,
+        "duration": 120,
+        "imdb_rating": 8.5,
+        "cast": ["Actor 1", "Actor 2", "Actor 3"]
+      }
      ```
 
 <details>
@@ -370,17 +311,17 @@ The API will return the following errors based on how the request fails:
 
 ```
 {
-    "created_movie_id": 3,
+    "message": "Movie added successfully",
     "success": true
 }
 ```
   
 </details>
 
-#### PATCH /movie/{movie_id}
+#### PATCH /movies/<int:movie_id>
  - General
    - updates the info for a movie
-   - requires `patch:movie` permission
+   - requires `patch:movies` permission
  
  - Request Body (at least one of the following fields required)
    - title: string, optional
@@ -394,12 +335,13 @@ The API will return the following errors based on how the request fails:
    - So, if you want to append new actors to a movie, pass the existing actors also in the request.
  
  - Sample Request
-   - `https://ry-fsnd-capstone.herokuapp.com/movies/3`
+   - `https://capstone-development.onrender.com/movies/2`
    - Request Body
      ```
-       {
-            "imdb_rating": 8.1
-       }
+      {
+        "title": "The Hidden Story",
+        "release_year": 2021
+      }
      ```
 
 <details>
@@ -408,10 +350,10 @@ The API will return the following errors based on how the request fails:
 ```
 {
     "movie_info": {
-        "duration": 130,
-        "imdb_rating": 8.1,
-        "release_year": 2019,
-        "title": "Knives Out"
+        "duration": 120,
+        "imdb_rating": 8.5,
+        "release_year": 2021,
+        "title": "The Hidden Story"
     },
     "success": true
 }
@@ -422,32 +364,20 @@ The API will return the following errors based on how the request fails:
 #### DELETE /movies/{movie_id}
  - General
    - deletes the movie
-   - requires `delete:movie` permission
+   - requires `delete:movies` permission
    - will not affect the actors present in the database
  
  - Sample Request
-   - `https://ry-fsnd-capstone.herokuapp.com/movies/3`
+   - `https://capstone-development.onrender.com/movies/2`
 
 <details>
 <summary>Sample Response</summary>
 
 ```
 {
-    "deleted_movie_id": 3,
+    "deleted_movie_id": 2,
     "success": true
 }
 ```
   
 </details>
-
-## Testing
-For testing the backend, run the following commands (in the exact order):
-```
-dropdb capstone_test
-createdb capstone_test
-psql capstone_test < casting.sql
-python test.py
-```
-
-Alternate way: Create the db `capstone_test` using PgAdmin and copy the contents of casting.sql and paste them
-in Query tool in PgAdmin and create the db table with records. Then, run the command `python test.py`.
