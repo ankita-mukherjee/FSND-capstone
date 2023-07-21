@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "cd0026b7-c635-49bd-8552-08b4413fbdb3",
+		"_postman_id": "b3373583-d9e2-42d1-bdd0-bb9814af0490",
 		"name": "capstone postman collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "27404041"
@@ -30,6 +30,16 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI4NzA1ZTAwMDI4ZjIzYmZkMGM5ODEiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NjQ1MCwiZXhwIjoxNjg5OTAzNjUwLCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.lYr4H47Er-9MxskaSB_ZMu9QnFrH3mDizkO67DIrcIeDTZfC-KDaVhXuFaaOBPazY0OwjTlRKLeP9y_FXDXYReBurDCTc3EZvlgyiOMwjZP5RvEdJU0DoegC4J1qH8JzD1s2YEQGfYsgIinNVH0Z2ukd5uqvYwJbKtL5pRpC0VMrHOE4LGJeeAFf3a_IH-l768r03HXBOfrvCc08zZmZykmWi1OG4Kz08ffbKQ8IibS9GJstmg2WzQjyc4TJKMTRo5-0QS2o7L6R9tRLXXY9DNtGNcyAihOSawyIg5SsYaY63Kln7PTkQZLPJey_F2KB1w8SSCkMfXzq0bcOw2NOkw",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -65,6 +75,16 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI4NzA1ZTAwMDI4ZjIzYmZkMGM5ODEiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NjQ1MCwiZXhwIjoxNjg5OTAzNjUwLCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.lYr4H47Er-9MxskaSB_ZMu9QnFrH3mDizkO67DIrcIeDTZfC-KDaVhXuFaaOBPazY0OwjTlRKLeP9y_FXDXYReBurDCTc3EZvlgyiOMwjZP5RvEdJU0DoegC4J1qH8JzD1s2YEQGfYsgIinNVH0Z2ukd5uqvYwJbKtL5pRpC0VMrHOE4LGJeeAFf3a_IH-l768r03HXBOfrvCc08zZmZykmWi1OG4Kz08ffbKQ8IibS9GJstmg2WzQjyc4TJKMTRo5-0QS2o7L6R9tRLXXY9DNtGNcyAihOSawyIg5SsYaY63Kln7PTkQZLPJey_F2KB1w8SSCkMfXzq0bcOw2NOkw",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -100,13 +120,22 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI4NzA1ZTAwMDI4ZjIzYmZkMGM5ODEiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NjQ1MCwiZXhwIjoxNjg5OTAzNjUwLCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.lYr4H47Er-9MxskaSB_ZMu9QnFrH3mDizkO67DIrcIeDTZfC-KDaVhXuFaaOBPazY0OwjTlRKLeP9y_FXDXYReBurDCTc3EZvlgyiOMwjZP5RvEdJU0DoegC4J1qH8JzD1s2YEQGfYsgIinNVH0Z2ukd5uqvYwJbKtL5pRpC0VMrHOE4LGJeeAFf3a_IH-l768r03HXBOfrvCc08zZmZykmWi1OG4Kz08ffbKQ8IibS9GJstmg2WzQjyc4TJKMTRo5-0QS2o7L6R9tRLXXY9DNtGNcyAihOSawyIg5SsYaY63Kln7PTkQZLPJey_F2KB1w8SSCkMfXzq0bcOw2NOkw",
 									"type": "string"
 								}
 							]
 						},
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n         \"name\": \"John Doe\",\n         \"age\": 30,\n         \"gender\": \"Male\"\n         }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{host}}/actors",
 							"host": [
@@ -140,13 +169,22 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI4NzA1ZTAwMDI4ZjIzYmZkMGM5ODEiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NjQ1MCwiZXhwIjoxNjg5OTAzNjUwLCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.lYr4H47Er-9MxskaSB_ZMu9QnFrH3mDizkO67DIrcIeDTZfC-KDaVhXuFaaOBPazY0OwjTlRKLeP9y_FXDXYReBurDCTc3EZvlgyiOMwjZP5RvEdJU0DoegC4J1qH8JzD1s2YEQGfYsgIinNVH0Z2ukd5uqvYwJbKtL5pRpC0VMrHOE4LGJeeAFf3a_IH-l768r03HXBOfrvCc08zZmZykmWi1OG4Kz08ffbKQ8IibS9GJstmg2WzQjyc4TJKMTRo5-0QS2o7L6R9tRLXXY9DNtGNcyAihOSawyIg5SsYaY63Kln7PTkQZLPJey_F2KB1w8SSCkMfXzq0bcOw2NOkw",
 									"type": "string"
 								}
 							]
 						},
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"The Movie\",\n  \"release_year\": 2023,\n  \"duration\": 120,\n  \"imdb_rating\": 8.5,\n  \"cast\": [\"Actor 1\", \"Actor 2\", \"Actor 3\"]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{host}}/movies",
 							"host": [
@@ -180,13 +218,22 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI4NzA1ZTAwMDI4ZjIzYmZkMGM5ODEiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NjQ1MCwiZXhwIjoxNjg5OTAzNjUwLCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.lYr4H47Er-9MxskaSB_ZMu9QnFrH3mDizkO67DIrcIeDTZfC-KDaVhXuFaaOBPazY0OwjTlRKLeP9y_FXDXYReBurDCTc3EZvlgyiOMwjZP5RvEdJU0DoegC4J1qH8JzD1s2YEQGfYsgIinNVH0Z2ukd5uqvYwJbKtL5pRpC0VMrHOE4LGJeeAFf3a_IH-l768r03HXBOfrvCc08zZmZykmWi1OG4Kz08ffbKQ8IibS9GJstmg2WzQjyc4TJKMTRo5-0QS2o7L6R9tRLXXY9DNtGNcyAihOSawyIg5SsYaY63Kln7PTkQZLPJey_F2KB1w8SSCkMfXzq0bcOw2NOkw",
 									"type": "string"
 								}
 							]
 						},
 						"method": "PATCH",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"name\": \"Merry\",\n        \"age\": 20,\n        \"gender\": \"Female\"\n      }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{host}}/actors/1",
 							"host": [
@@ -221,13 +268,22 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI4NzA1ZTAwMDI4ZjIzYmZkMGM5ODEiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NjQ1MCwiZXhwIjoxNjg5OTAzNjUwLCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.lYr4H47Er-9MxskaSB_ZMu9QnFrH3mDizkO67DIrcIeDTZfC-KDaVhXuFaaOBPazY0OwjTlRKLeP9y_FXDXYReBurDCTc3EZvlgyiOMwjZP5RvEdJU0DoegC4J1qH8JzD1s2YEQGfYsgIinNVH0Z2ukd5uqvYwJbKtL5pRpC0VMrHOE4LGJeeAFf3a_IH-l768r03HXBOfrvCc08zZmZykmWi1OG4Kz08ffbKQ8IibS9GJstmg2WzQjyc4TJKMTRo5-0QS2o7L6R9tRLXXY9DNtGNcyAihOSawyIg5SsYaY63Kln7PTkQZLPJey_F2KB1w8SSCkMfXzq0bcOw2NOkw",
 									"type": "string"
 								}
 							]
 						},
 						"method": "PATCH",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"title\": \"The Hidden Story\",\n        \"release_year\": 2021\n      }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{host}}/movies/1",
 							"host": [
@@ -262,7 +318,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI4NzA1ZTAwMDI4ZjIzYmZkMGM5ODEiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NjQ1MCwiZXhwIjoxNjg5OTAzNjUwLCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.lYr4H47Er-9MxskaSB_ZMu9QnFrH3mDizkO67DIrcIeDTZfC-KDaVhXuFaaOBPazY0OwjTlRKLeP9y_FXDXYReBurDCTc3EZvlgyiOMwjZP5RvEdJU0DoegC4J1qH8JzD1s2YEQGfYsgIinNVH0Z2ukd5uqvYwJbKtL5pRpC0VMrHOE4LGJeeAFf3a_IH-l768r03HXBOfrvCc08zZmZykmWi1OG4Kz08ffbKQ8IibS9GJstmg2WzQjyc4TJKMTRo5-0QS2o7L6R9tRLXXY9DNtGNcyAihOSawyIg5SsYaY63Kln7PTkQZLPJey_F2KB1w8SSCkMfXzq0bcOw2NOkw",
 									"type": "string"
 								}
 							]
@@ -303,7 +359,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI4NzA1ZTAwMDI4ZjIzYmZkMGM5ODEiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NjQ1MCwiZXhwIjoxNjg5OTAzNjUwLCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.lYr4H47Er-9MxskaSB_ZMu9QnFrH3mDizkO67DIrcIeDTZfC-KDaVhXuFaaOBPazY0OwjTlRKLeP9y_FXDXYReBurDCTc3EZvlgyiOMwjZP5RvEdJU0DoegC4J1qH8JzD1s2YEQGfYsgIinNVH0Z2ukd5uqvYwJbKtL5pRpC0VMrHOE4LGJeeAFf3a_IH-l768r03HXBOfrvCc08zZmZykmWi1OG4Kz08ffbKQ8IibS9GJstmg2WzQjyc4TJKMTRo5-0QS2o7L6R9tRLXXY9DNtGNcyAihOSawyIg5SsYaY63Kln7PTkQZLPJey_F2KB1w8SSCkMfXzq0bcOw2NOkw",
 									"type": "string"
 								}
 							]
@@ -322,6 +378,36 @@
 						}
 					},
 					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI4NzA1ZTAwMDI4ZjIzYmZkMGM5ODEiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NjQ1MCwiZXhwIjoxNjg5OTAzNjUwLCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.lYr4H47Er-9MxskaSB_ZMu9QnFrH3mDizkO67DIrcIeDTZfC-KDaVhXuFaaOBPazY0OwjTlRKLeP9y_FXDXYReBurDCTc3EZvlgyiOMwjZP5RvEdJU0DoegC4J1qH8JzD1s2YEQGfYsgIinNVH0Z2ukd5uqvYwJbKtL5pRpC0VMrHOE4LGJeeAFf3a_IH-l768r03HXBOfrvCc08zZmZykmWi1OG4Kz08ffbKQ8IibS9GJstmg2WzQjyc4TJKMTRo5-0QS2o7L6R9tRLXXY9DNtGNcyAihOSawyIg5SsYaY63Kln7PTkQZLPJey_F2KB1w8SSCkMfXzq0bcOw2NOkw",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
 			]
 		},
@@ -349,6 +435,16 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI4NzEwMTI2Y2ZjMjNiOTczOWFhOTUiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NjgxMywiZXhwIjoxNjg5OTA0MDEzLCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.QkYKMM4dxIdK6LtGO7wWk8fXsgyWyQn_etxcyYm4ORHTNykDXARBzG5-bHNV6U-qFuDxlOWqz2krMtv3nsi1WLq3hlAwMADsZVJf-LSvzKPhEi9TOeCEfcMz9q5f3QUXKgmP678k3m2CHRsE6rX4ZuZ9EUX6r4FBR1oZNBkJJ7sz14qIL7tpm7VYSQ83M7Xvcat_9eEmvaWQwAVWbDC-5_N3jtl1u6r2qT7csjrora9ECDpVbCpQQYiUJLoTp2vQiovTKoNggZtA8CZUS9IURah5FO8CDmikw5qW6HgzBfgIKmUUcBpsJes1Fn0eTkDlbdmqYsQz3AXDkN43bcGJ0g",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -384,6 +480,16 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI4NzEwMTI2Y2ZjMjNiOTczOWFhOTUiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NjgxMywiZXhwIjoxNjg5OTA0MDEzLCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.QkYKMM4dxIdK6LtGO7wWk8fXsgyWyQn_etxcyYm4ORHTNykDXARBzG5-bHNV6U-qFuDxlOWqz2krMtv3nsi1WLq3hlAwMADsZVJf-LSvzKPhEi9TOeCEfcMz9q5f3QUXKgmP678k3m2CHRsE6rX4ZuZ9EUX6r4FBR1oZNBkJJ7sz14qIL7tpm7VYSQ83M7Xvcat_9eEmvaWQwAVWbDC-5_N3jtl1u6r2qT7csjrora9ECDpVbCpQQYiUJLoTp2vQiovTKoNggZtA8CZUS9IURah5FO8CDmikw5qW6HgzBfgIKmUUcBpsJes1Fn0eTkDlbdmqYsQz3AXDkN43bcGJ0g",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -419,13 +525,22 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI4NzEwMTI2Y2ZjMjNiOTczOWFhOTUiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NjgxMywiZXhwIjoxNjg5OTA0MDEzLCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.QkYKMM4dxIdK6LtGO7wWk8fXsgyWyQn_etxcyYm4ORHTNykDXARBzG5-bHNV6U-qFuDxlOWqz2krMtv3nsi1WLq3hlAwMADsZVJf-LSvzKPhEi9TOeCEfcMz9q5f3QUXKgmP678k3m2CHRsE6rX4ZuZ9EUX6r4FBR1oZNBkJJ7sz14qIL7tpm7VYSQ83M7Xvcat_9eEmvaWQwAVWbDC-5_N3jtl1u6r2qT7csjrora9ECDpVbCpQQYiUJLoTp2vQiovTKoNggZtA8CZUS9IURah5FO8CDmikw5qW6HgzBfgIKmUUcBpsJes1Fn0eTkDlbdmqYsQz3AXDkN43bcGJ0g",
 									"type": "string"
 								}
 							]
 						},
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n         \"name\": \"John Doe\",\n         \"age\": 30,\n         \"gender\": \"Male\"\n         }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{host}}/actors",
 							"host": [
@@ -459,13 +574,22 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI4NzEwMTI2Y2ZjMjNiOTczOWFhOTUiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NjgxMywiZXhwIjoxNjg5OTA0MDEzLCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.QkYKMM4dxIdK6LtGO7wWk8fXsgyWyQn_etxcyYm4ORHTNykDXARBzG5-bHNV6U-qFuDxlOWqz2krMtv3nsi1WLq3hlAwMADsZVJf-LSvzKPhEi9TOeCEfcMz9q5f3QUXKgmP678k3m2CHRsE6rX4ZuZ9EUX6r4FBR1oZNBkJJ7sz14qIL7tpm7VYSQ83M7Xvcat_9eEmvaWQwAVWbDC-5_N3jtl1u6r2qT7csjrora9ECDpVbCpQQYiUJLoTp2vQiovTKoNggZtA8CZUS9IURah5FO8CDmikw5qW6HgzBfgIKmUUcBpsJes1Fn0eTkDlbdmqYsQz3AXDkN43bcGJ0g",
 									"type": "string"
 								}
 							]
 						},
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"The Movie\",\n  \"release_year\": 2023,\n  \"duration\": 120,\n  \"imdb_rating\": 8.5,\n  \"cast\": [\"Actor 1\", \"Actor 2\", \"Actor 3\"]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{host}}/movies",
 							"host": [
@@ -479,7 +603,7 @@
 					"response": []
 				},
 				{
-					"name": "actors/1",
+					"name": "actors/2",
 					"event": [
 						{
 							"listen": "test",
@@ -499,28 +623,37 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI4NzEwMTI2Y2ZjMjNiOTczOWFhOTUiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NjgxMywiZXhwIjoxNjg5OTA0MDEzLCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.QkYKMM4dxIdK6LtGO7wWk8fXsgyWyQn_etxcyYm4ORHTNykDXARBzG5-bHNV6U-qFuDxlOWqz2krMtv3nsi1WLq3hlAwMADsZVJf-LSvzKPhEi9TOeCEfcMz9q5f3QUXKgmP678k3m2CHRsE6rX4ZuZ9EUX6r4FBR1oZNBkJJ7sz14qIL7tpm7VYSQ83M7Xvcat_9eEmvaWQwAVWbDC-5_N3jtl1u6r2qT7csjrora9ECDpVbCpQQYiUJLoTp2vQiovTKoNggZtA8CZUS9IURah5FO8CDmikw5qW6HgzBfgIKmUUcBpsJes1Fn0eTkDlbdmqYsQz3AXDkN43bcGJ0g",
 									"type": "string"
 								}
 							]
 						},
 						"method": "PATCH",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"name\": \"Merry\",\n        \"age\": 20,\n        \"gender\": \"Female\"\n      }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "{{host}}/actors/1",
+							"raw": "{{host}}/actors/3",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"actors",
-								"1"
+								"3"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "movies/1",
+					"name": "movies/2",
 					"event": [
 						{
 							"listen": "test",
@@ -540,28 +673,37 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI4NzEwMTI2Y2ZjMjNiOTczOWFhOTUiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NjgxMywiZXhwIjoxNjg5OTA0MDEzLCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.QkYKMM4dxIdK6LtGO7wWk8fXsgyWyQn_etxcyYm4ORHTNykDXARBzG5-bHNV6U-qFuDxlOWqz2krMtv3nsi1WLq3hlAwMADsZVJf-LSvzKPhEi9TOeCEfcMz9q5f3QUXKgmP678k3m2CHRsE6rX4ZuZ9EUX6r4FBR1oZNBkJJ7sz14qIL7tpm7VYSQ83M7Xvcat_9eEmvaWQwAVWbDC-5_N3jtl1u6r2qT7csjrora9ECDpVbCpQQYiUJLoTp2vQiovTKoNggZtA8CZUS9IURah5FO8CDmikw5qW6HgzBfgIKmUUcBpsJes1Fn0eTkDlbdmqYsQz3AXDkN43bcGJ0g",
 									"type": "string"
 								}
 							]
 						},
 						"method": "PATCH",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"title\": \"The Hidden Story\",\n        \"release_year\": 2021\n      }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "{{host}}/movies/1",
+							"raw": "{{host}}/movies/2",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"movies",
-								"1"
+								"2"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "actors/1",
+					"name": "actors/2",
 					"event": [
 						{
 							"listen": "test",
@@ -581,7 +723,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI4NzEwMTI2Y2ZjMjNiOTczOWFhOTUiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NjgxMywiZXhwIjoxNjg5OTA0MDEzLCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.QkYKMM4dxIdK6LtGO7wWk8fXsgyWyQn_etxcyYm4ORHTNykDXARBzG5-bHNV6U-qFuDxlOWqz2krMtv3nsi1WLq3hlAwMADsZVJf-LSvzKPhEi9TOeCEfcMz9q5f3QUXKgmP678k3m2CHRsE6rX4ZuZ9EUX6r4FBR1oZNBkJJ7sz14qIL7tpm7VYSQ83M7Xvcat_9eEmvaWQwAVWbDC-5_N3jtl1u6r2qT7csjrora9ECDpVbCpQQYiUJLoTp2vQiovTKoNggZtA8CZUS9IURah5FO8CDmikw5qW6HgzBfgIKmUUcBpsJes1Fn0eTkDlbdmqYsQz3AXDkN43bcGJ0g",
 									"type": "string"
 								}
 							]
@@ -589,20 +731,20 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/actors/1",
+							"raw": "{{host}}/actors/2",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"actors",
-								"1"
+								"2"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "movies/1",
+					"name": "movies/2",
 					"event": [
 						{
 							"listen": "test",
@@ -622,7 +764,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI4NzEwMTI2Y2ZjMjNiOTczOWFhOTUiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NjgxMywiZXhwIjoxNjg5OTA0MDEzLCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.QkYKMM4dxIdK6LtGO7wWk8fXsgyWyQn_etxcyYm4ORHTNykDXARBzG5-bHNV6U-qFuDxlOWqz2krMtv3nsi1WLq3hlAwMADsZVJf-LSvzKPhEi9TOeCEfcMz9q5f3QUXKgmP678k3m2CHRsE6rX4ZuZ9EUX6r4FBR1oZNBkJJ7sz14qIL7tpm7VYSQ83M7Xvcat_9eEmvaWQwAVWbDC-5_N3jtl1u6r2qT7csjrora9ECDpVbCpQQYiUJLoTp2vQiovTKoNggZtA8CZUS9IURah5FO8CDmikw5qW6HgzBfgIKmUUcBpsJes1Fn0eTkDlbdmqYsQz3AXDkN43bcGJ0g",
 									"type": "string"
 								}
 							]
@@ -630,13 +772,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/movies/1",
+							"raw": "{{host}}/movies/2",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"movies",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -648,7 +790,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI4NzEwMTI2Y2ZjMjNiOTczOWFhOTUiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NjgxMywiZXhwIjoxNjg5OTA0MDEzLCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.QkYKMM4dxIdK6LtGO7wWk8fXsgyWyQn_etxcyYm4ORHTNykDXARBzG5-bHNV6U-qFuDxlOWqz2krMtv3nsi1WLq3hlAwMADsZVJf-LSvzKPhEi9TOeCEfcMz9q5f3QUXKgmP678k3m2CHRsE6rX4ZuZ9EUX6r4FBR1oZNBkJJ7sz14qIL7tpm7VYSQ83M7Xvcat_9eEmvaWQwAVWbDC-5_N3jtl1u6r2qT7csjrora9ECDpVbCpQQYiUJLoTp2vQiovTKoNggZtA8CZUS9IURah5FO8CDmikw5qW6HgzBfgIKmUUcBpsJes1Fn0eTkDlbdmqYsQz3AXDkN43bcGJ0g",
 						"type": "string"
 					}
 				]
@@ -698,6 +840,16 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI2ZmY0MjllZjI5MDEwNDAwMzdmYzMiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NzA0OCwiZXhwIjoxNjg5OTA0MjQ4LCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.KHwXSJG2hUdnE-EHLI_k0zM6WsmnZBrLl_eAplxE3DOAP9HeZXude42nlgwU_SuZHIB4P_FwBZxdmcRRRHJpbmWr3u7H5r5UpTLx7HJhZ385EQy5eQr_wn_5WmBNFTPUpMZFYnZYI9rwrv_oMP6wca6m_bnhkG5ZUBZ4S6eCgCYZrB_uWc2aCN_8Pbu1MjjkTE9njItgJ4bu_Nq74GEMnbW8p4KGu0Pud0-IXOPiP4g55C4DDt96gLReAb5ZkOeljcs_UpBbgP8C6PFR6O9vpnl63M7XuFWRG8_43tI3axm6pDq14ujDLxTdd9VgVJbMl4psNlqW4ARnhtZ1uKllFA",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -733,6 +885,16 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI2ZmY0MjllZjI5MDEwNDAwMzdmYzMiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NzA0OCwiZXhwIjoxNjg5OTA0MjQ4LCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.KHwXSJG2hUdnE-EHLI_k0zM6WsmnZBrLl_eAplxE3DOAP9HeZXude42nlgwU_SuZHIB4P_FwBZxdmcRRRHJpbmWr3u7H5r5UpTLx7HJhZ385EQy5eQr_wn_5WmBNFTPUpMZFYnZYI9rwrv_oMP6wca6m_bnhkG5ZUBZ4S6eCgCYZrB_uWc2aCN_8Pbu1MjjkTE9njItgJ4bu_Nq74GEMnbW8p4KGu0Pud0-IXOPiP4g55C4DDt96gLReAb5ZkOeljcs_UpBbgP8C6PFR6O9vpnl63M7XuFWRG8_43tI3axm6pDq14ujDLxTdd9VgVJbMl4psNlqW4ARnhtZ1uKllFA",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -768,13 +930,22 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI2ZmY0MjllZjI5MDEwNDAwMzdmYzMiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NzA0OCwiZXhwIjoxNjg5OTA0MjQ4LCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.KHwXSJG2hUdnE-EHLI_k0zM6WsmnZBrLl_eAplxE3DOAP9HeZXude42nlgwU_SuZHIB4P_FwBZxdmcRRRHJpbmWr3u7H5r5UpTLx7HJhZ385EQy5eQr_wn_5WmBNFTPUpMZFYnZYI9rwrv_oMP6wca6m_bnhkG5ZUBZ4S6eCgCYZrB_uWc2aCN_8Pbu1MjjkTE9njItgJ4bu_Nq74GEMnbW8p4KGu0Pud0-IXOPiP4g55C4DDt96gLReAb5ZkOeljcs_UpBbgP8C6PFR6O9vpnl63M7XuFWRG8_43tI3axm6pDq14ujDLxTdd9VgVJbMl4psNlqW4ARnhtZ1uKllFA",
 									"type": "string"
 								}
 							]
 						},
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n         \"name\": \"John Doe\",\n         \"age\": 30,\n         \"gender\": \"Male\"\n         }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{host}}/actors",
 							"host": [
@@ -808,13 +979,22 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI2ZmY0MjllZjI5MDEwNDAwMzdmYzMiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NzA0OCwiZXhwIjoxNjg5OTA0MjQ4LCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.KHwXSJG2hUdnE-EHLI_k0zM6WsmnZBrLl_eAplxE3DOAP9HeZXude42nlgwU_SuZHIB4P_FwBZxdmcRRRHJpbmWr3u7H5r5UpTLx7HJhZ385EQy5eQr_wn_5WmBNFTPUpMZFYnZYI9rwrv_oMP6wca6m_bnhkG5ZUBZ4S6eCgCYZrB_uWc2aCN_8Pbu1MjjkTE9njItgJ4bu_Nq74GEMnbW8p4KGu0Pud0-IXOPiP4g55C4DDt96gLReAb5ZkOeljcs_UpBbgP8C6PFR6O9vpnl63M7XuFWRG8_43tI3axm6pDq14ujDLxTdd9VgVJbMl4psNlqW4ARnhtZ1uKllFA",
 									"type": "string"
 								}
 							]
 						},
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"The Movie\",\n  \"release_year\": 2023,\n  \"duration\": 120,\n  \"imdb_rating\": 8.5,\n  \"cast\": [\"Actor 1\", \"Actor 2\", \"Actor 3\"]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{host}}/movies",
 							"host": [
@@ -828,7 +1008,7 @@
 					"response": []
 				},
 				{
-					"name": "actors/1",
+					"name": "actors/2",
 					"event": [
 						{
 							"listen": "test",
@@ -848,28 +1028,37 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI2ZmY0MjllZjI5MDEwNDAwMzdmYzMiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NzA0OCwiZXhwIjoxNjg5OTA0MjQ4LCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.KHwXSJG2hUdnE-EHLI_k0zM6WsmnZBrLl_eAplxE3DOAP9HeZXude42nlgwU_SuZHIB4P_FwBZxdmcRRRHJpbmWr3u7H5r5UpTLx7HJhZ385EQy5eQr_wn_5WmBNFTPUpMZFYnZYI9rwrv_oMP6wca6m_bnhkG5ZUBZ4S6eCgCYZrB_uWc2aCN_8Pbu1MjjkTE9njItgJ4bu_Nq74GEMnbW8p4KGu0Pud0-IXOPiP4g55C4DDt96gLReAb5ZkOeljcs_UpBbgP8C6PFR6O9vpnl63M7XuFWRG8_43tI3axm6pDq14ujDLxTdd9VgVJbMl4psNlqW4ARnhtZ1uKllFA",
 									"type": "string"
 								}
 							]
 						},
 						"method": "PATCH",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"name\": \"Merry\",\n        \"age\": 20,\n        \"gender\": \"Female\"\n      }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "{{host}}/actors/1",
+							"raw": "{{host}}/actors/2",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"actors",
-								"1"
+								"2"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "movies/1",
+					"name": "movies/2",
 					"event": [
 						{
 							"listen": "test",
@@ -889,28 +1078,37 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI2ZmY0MjllZjI5MDEwNDAwMzdmYzMiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NzA0OCwiZXhwIjoxNjg5OTA0MjQ4LCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.KHwXSJG2hUdnE-EHLI_k0zM6WsmnZBrLl_eAplxE3DOAP9HeZXude42nlgwU_SuZHIB4P_FwBZxdmcRRRHJpbmWr3u7H5r5UpTLx7HJhZ385EQy5eQr_wn_5WmBNFTPUpMZFYnZYI9rwrv_oMP6wca6m_bnhkG5ZUBZ4S6eCgCYZrB_uWc2aCN_8Pbu1MjjkTE9njItgJ4bu_Nq74GEMnbW8p4KGu0Pud0-IXOPiP4g55C4DDt96gLReAb5ZkOeljcs_UpBbgP8C6PFR6O9vpnl63M7XuFWRG8_43tI3axm6pDq14ujDLxTdd9VgVJbMl4psNlqW4ARnhtZ1uKllFA",
 									"type": "string"
 								}
 							]
 						},
 						"method": "PATCH",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"title\": \"The Hidden Story\",\n        \"release_year\": 2021\n      }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "{{host}}/movies/1",
+							"raw": "{{host}}/movies/2",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"movies",
-								"1"
+								"2"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "actors/1",
+					"name": "actors/2",
 					"event": [
 						{
 							"listen": "test",
@@ -930,7 +1128,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI2ZmY0MjllZjI5MDEwNDAwMzdmYzMiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NzA0OCwiZXhwIjoxNjg5OTA0MjQ4LCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.KHwXSJG2hUdnE-EHLI_k0zM6WsmnZBrLl_eAplxE3DOAP9HeZXude42nlgwU_SuZHIB4P_FwBZxdmcRRRHJpbmWr3u7H5r5UpTLx7HJhZ385EQy5eQr_wn_5WmBNFTPUpMZFYnZYI9rwrv_oMP6wca6m_bnhkG5ZUBZ4S6eCgCYZrB_uWc2aCN_8Pbu1MjjkTE9njItgJ4bu_Nq74GEMnbW8p4KGu0Pud0-IXOPiP4g55C4DDt96gLReAb5ZkOeljcs_UpBbgP8C6PFR6O9vpnl63M7XuFWRG8_43tI3axm6pDq14ujDLxTdd9VgVJbMl4psNlqW4ARnhtZ1uKllFA",
 									"type": "string"
 								}
 							]
@@ -938,20 +1136,20 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/actors/1",
+							"raw": "{{host}}/actors/2",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"actors",
-								"1"
+								"2"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "movies/1",
+					"name": "movies/2",
 					"event": [
 						{
 							"listen": "test",
@@ -971,7 +1169,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI2ZmY0MjllZjI5MDEwNDAwMzdmYzMiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NzA0OCwiZXhwIjoxNjg5OTA0MjQ4LCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.KHwXSJG2hUdnE-EHLI_k0zM6WsmnZBrLl_eAplxE3DOAP9HeZXude42nlgwU_SuZHIB4P_FwBZxdmcRRRHJpbmWr3u7H5r5UpTLx7HJhZ385EQy5eQr_wn_5WmBNFTPUpMZFYnZYI9rwrv_oMP6wca6m_bnhkG5ZUBZ4S6eCgCYZrB_uWc2aCN_8Pbu1MjjkTE9njItgJ4bu_Nq74GEMnbW8p4KGu0Pud0-IXOPiP4g55C4DDt96gLReAb5ZkOeljcs_UpBbgP8C6PFR6O9vpnl63M7XuFWRG8_43tI3axm6pDq14ujDLxTdd9VgVJbMl4psNlqW4ARnhtZ1uKllFA",
 									"type": "string"
 								}
 							]
@@ -979,13 +1177,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/movies/1",
+							"raw": "{{host}}/movies/2",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"movies",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -997,7 +1195,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg4OTU5NiwiZXhwIjoxNTYwODk2Nzk2LCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6ZHJpbmtzIiwiZ2V0OmRyaW5rcyIsImdldDpkcmlua3MtZGV0YWlsIiwicGF0Y2g6ZHJpbmtzIiwicG9zdDpkcmlua3MiXX0.Qk-5FC2X_RUkK00WKARYCKw_877XFuaT5ND3f3ObD9Ly1e1GMfJXhi3McV12binGGCw6x241erIjGB0t8WbWdU3bYpIVD1klZ64DVLQ8Q2LQ2NzB3eFEOgGLL85az1jIDbRiuATIRbbBOWILPJ6h6KR9L5hExklf2zuj3Bnwm7zMRmVpIJmjrUt4bWjtTOguOwJ0IVQsk4PDjGxzwfrUWFCFNDqN_u15JNLxeH21C-QvCpHs3D4Aodeh1qFUuWHfK_Gyfu91AitXPTVZRX9eZbUOVkGT3JMn4sKn9oGaKFTx2E-Y4DmoECG0uWImbX_wiRjx4aTeo7Q7hKSReMToPA",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImpjVTVNZXl3RlZtQVUxRnN2OE1ZSSJ9.eyJpc3MiOiJodHRwczovL2Rldi11ZGFjaXR5LWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGI2ZmY0MjllZjI5MDEwNDAwMzdmYzMiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY4OTg5NzA0OCwiZXhwIjoxNjg5OTA0MjQ4LCJhenAiOiJidERGcmw4QUFCZTJyZHdaWUczUGtIOGp5U3IyNkppRSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.KHwXSJG2hUdnE-EHLI_k0zM6WsmnZBrLl_eAplxE3DOAP9HeZXude42nlgwU_SuZHIB4P_FwBZxdmcRRRHJpbmWr3u7H5r5UpTLx7HJhZ385EQy5eQr_wn_5WmBNFTPUpMZFYnZYI9rwrv_oMP6wca6m_bnhkG5ZUBZ4S6eCgCYZrB_uWc2aCN_8Pbu1MjjkTE9njItgJ4bu_Nq74GEMnbW8p4KGu0Pud0-IXOPiP4g55C4DDt96gLReAb5ZkOeljcs_UpBbgP8C6PFR6O9vpnl63M7XuFWRG8_43tI3axm6pDq14ujDLxTdd9VgVJbMl4psNlqW4ARnhtZ1uKllFA",
 						"type": "string"
 					}
 				]
@@ -1047,7 +1245,7 @@
 	"variable": [
 		{
 			"key": "host",
-			"value": "localhost:5000",
+			"value": "https://capstone-development.onrender.com",
 			"type": "string"
 		}
 	]
