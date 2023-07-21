@@ -135,14 +135,14 @@ Enable RBAC
 Enable Add Permissions in the Access Token
 Create new API permissions:
 ```
-get:actors -> view all actors	
-get:movies -> view all movies	
-delete:actors	-> delete actors	
-delete:movies	-> delete movies	
-post:actors	-> post actors	
-post:movies	-> post movies	
-patch:actors	-> update actor	
-patch:movies -> update movies
+get:actors-> view all actors	
+get:movies-> view all movies	
+delete:actors-> delete actors	
+delete:movies-> delete movies	
+post:actors-> post actors	
+post:movies-> post movies	
+patch:actors-> update actor	
+patch:movies-> update movies
 ```
 Sign into each account and make note of the JWT.
 Authentication: This application requires authentication to perform various actions. All the endpoints require
